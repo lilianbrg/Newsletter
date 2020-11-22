@@ -4,7 +4,6 @@ import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -22,7 +21,7 @@ import com.example.newsletter.models.Article
 import com.example.newsletter.models.ArticleResponse
 
 class ListArticlesAdapter(
-        items: ArticleResponse, val handler: ListArticleHandler
+        items: ArticleResponse, val handler: ListArticlesHandler
 ) : RecyclerView.Adapter<ListArticlesAdapter.ViewHolder>() {
 
     private val mArticles: ArticleResponse = items

@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsletter.R
 import com.example.newsletter.data.ArticleRepository
-import com.example.newsletter.data.adapters.ListArticleHandler
+import com.example.newsletter.data.adapters.ListArticlesHandler
 import com.example.newsletter.data.adapters.ListArticlesAdapter
 import com.example.newsletter.models.ArticleResponse
 import kotlinx.coroutines.launch
 
-class ListArticlesFragment (subject:String): Fragment(), ListArticleHandler {
+class ListArticlesFragment (subject:String): Fragment(), ListArticlesHandler {
     private lateinit var recyclerView: RecyclerView
     val subject = subject
 
@@ -27,7 +27,7 @@ class ListArticlesFragment (subject:String): Fragment(), ListArticleHandler {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.activity_main, container, false)
+        val view = inflater.inflate(R.layout.list_articles, container, false)
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.addItemDecoration(
